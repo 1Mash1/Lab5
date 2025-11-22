@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+    <title>Basic HTML page</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<section class="code-section container">
+    <h1>Hello, world!</h1>
+
+    <p class="code-section__note">To see your JavaScript code output, please, open browser console by pressing F12.
+    </p>
+
+    <div class="container" id="task2"></div>
+
+    <div class="container" id="task1">
+        <p class="paragraph paragraph_hidden">
+            Text should be visible
+        </p>
+        <div class="wrapper">
+            <p class="paragraph">
+                Text should be visible
+            </p>
+        </div>
+    </div>
+
+    <div class="container" id="task3">
+        <p class="paragraph paragraph_hidden">
+            Text should be hidden
+        </p>
+        <p class="paragraph">
+            Text should be visible
+        </p>
+        <p class="paragraph paragraph_hidden">
+            Text should be hidden as well
+        </p>
+    </div>
+
+    <div class="container" id="task4">
+        <h3>
+            This tag should have data-type text
+        </h3>
+        <section>
+            This tag should have data-type container
+            <p class="paragraph">
+                This article should have data-type text
+            </p>
+        </section>
+    </div>
+</section>
+
+<script src="script.js"></script>
+
+<script>
+    let classArray = getClassArray();
+    console.log('classArray: ', classArray);
+
+    addContentToContainer('<p>text</p>');
+
+    let removedItems = removeHiddenParagraphs();
+    console.log('removedItems: ', removedItems);
+
+    setDataAttr()
+</script>
+</body>
+
+</html>

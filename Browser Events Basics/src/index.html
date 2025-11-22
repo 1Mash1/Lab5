@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+    <title>Basic HTML page</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Browser Events Basics</h1>
+
+    <p>To see your JavaScript code output, please, open browser console by pressing F12.
+    </p>
+
+    <div class="tasks-row">
+        <section class="code-section">
+            <h2 id="task-1">Task 1: Hide Notifications</h2>
+
+            <ul class="notifications">
+                <li class="notification">
+                    <h3 class="title">John Doe</h3>
+                    <p class="text">Hey bro! Long time no see, I'm glad to hear you!</p>
+
+                    <button class="notification-close" type="button">
+                        CLOSE
+                    </button>
+                </li>
+                <li class="notification">
+                    <h3 class="title">Matthew</h3>
+                    <p class="text">Hi, please look at this pic in attachment</p>
+
+                    <button class="notification-close" type="button">
+                        CLOSE
+                    </button>
+                </li>
+                <li class="notification">
+                    <h3 class="title">Ana</h3>
+                    <p class="text">Gentle reminder to check out for...</p>
+
+                    <button class="notification-close" type="button">
+                        CLOSE
+                    </button>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <div class="task-row">
+        <section class="code-section">
+            <h2 id="task-2">Task 2: Check links</h2>
+
+            <article class="check-links">
+                <header>Lorem</header>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores ullam accusamus sit sint.
+                    Reiciendis, nam necessitatibus? Officiis pariatur dolorem reprehenderit, est aliquid voluptatum
+                    quaerat, distinctio neque veritatis vel natus vero!</p>
+
+                <p>
+                    <a href="page2.html">Page 2 link</a>
+                </p>
+
+                <p>
+                    <a href="#task-1">Task 1 in the text</a>
+                </p>
+
+                <p>
+                    <a href="#task-2">Task 2 in the text</a>
+                </p>
+
+                <p>
+                    <a href="#task-3">Task 3 in the text</a>
+                </p>
+
+                <p>
+                    <a href="https://developer.mozilla.org/en-US/">MDN (Link to another website)</a>
+                </p>
+
+                <p>
+                    <a href="https://www.w3schools.com/">w3schools (Link to another website)</a>
+                </p>
+            </article>
+        </section>
+    </div>
+
+    <div class="task-row">
+        <section class="code-section">
+            <h2 id="task-3">Task 3: Add Selection</h2>
+
+            <article class="add-selection">
+                <header>Choose your favorite bands</header>
+                <ul class="list">
+                    <li class="selectable-item">Arch Ameny</li>
+                    <li class="selectable-item">Disturbed</li>
+                    <li class="selectable-item">Korn</li>
+                    <li class="selectable-item">Bullet for My Valentine</li>
+                    <li class="selectable-item">Slipknot</li>
+                    <li class="selectable-item">BTS</li>
+                </ul>
+            </article>
+        </section>
+    </div>
+
+    <script type="module">
+        console.clear();
+
+        import { hideNotifications } from './hideNotifications.js';
+
+        hideNotifications();
+    </script>
+
+    <script type="module">
+        console.clear();
+
+        import { checkLinks } from './checkLinks.js';
+
+        checkLinks();
+    </script>
+
+    <script type="module">
+        console.clear();
+
+        import { addSelection } from './addSelection.js';
+
+        addSelection();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+    <title>Basic HTML page</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Browser Events in Practice</h1>
+
+    <p>To see your JavaScript code output, please, open browser console by pressing F12.</p>
+
+    <div class="tasks-row">
+        <section class="code-section create-tip">
+            <h2 id="task-1">Task 1: Create Tip</h2>
+        </section>
+    </div>
+
+    <div class="task-row">
+        <section class="code-section validate-email-form">
+            <h2 id="task-2">Task 2: Validate Email Form</h2>
+
+            <form action="POST" class="email-form">
+                <legend class="email-form__legend">Please, email us you thoughts.</legend>
+
+                <div class="email-form__row" id="to-field-wrapper">
+                    <label for="to-field" class="email-form__label">To</label>
+                    <input type="text" name="to" id="to-field" class="email-form__input">
+                    <div class="email-form__valid-mark hidden" aria-lable="To field is valid">✅</div>
+                </div>
+
+                <div class="email-form__row" id="topic-field-wrapper">
+                    <label for="topic-field" class="email-form__label">Topic</label>
+                    <input type="text" name="topic" id="topic-field" class="email-form__input">
+                </div>
+
+                <div class="email-form__row">
+                    <label for="text-field" class="email-form__label">Text</label>
+                    <textarea class="email-form__text" name="text" id="text-field" cols="30" rows="10"></textarea>
+                </div>
+
+                <div class="email-form__row">
+                    <input class="email-form__accept-terms" type="checkbox" name="accept-terms" id="accept-terms">
+                    <label for="accept-terms" class="email-for__label">Accept Terms</label>
+                </div>
+
+                <button disabled class="email-form__button" type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+
+    <div class="task-row">
+        <section class="code-section">
+            <h2 id="task-3">Task 3: Add Selection</h2>
+
+            <img width="100%" src="images/pic1.jpg" alt="Nature from the sky">
+            <img width="100%" src="images/pic2.jpg" alt="Nature from the sky">
+            <img width="100%" src="images/pic3.jpg" alt="Nature from the sky">
+            <img width="100%" src="images/pic4.jpg" alt="Nature from the sky">
+        </section>
+    </div>
+
+    <script type="module">
+        console.clear();
+
+        import { createTip } from './createTip.js';
+
+        const tip = createTip('Some Cool Tip');
+        const wrapper = document.querySelector('.create-tip');
+
+        wrapper.append(tip);
+    </script>
+
+    <script type="module">
+        import { validateEmailForm } from './validateEmailForm.js';
+
+        validateEmailForm();
+
+        document.body.addEventListener('email-form-submit', () => {
+            console.log('email-form-submit event');
+        });
+    </script>
+
+    <script type="module">
+        import { pageLoad } from './pageLoad.js';
+
+        pageLoad();
+    </script>
+</body>
+
+</html>

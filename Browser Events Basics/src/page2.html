@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+    <title>Basic HTML page</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Page 2</h1>
+
+    <a>Go Back to main page</a>
+   
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const pathname = location.pathname;
+            let a = document.querySelector('a');
+            const correctHref = pathname.replace(/page2.html/gi, '');
+
+            a.href = correctHref;
+        });
+    </script>
+</body>
+
+</html>
